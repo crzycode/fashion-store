@@ -4,14 +4,14 @@ using System.Linq;
 using System.Web.Http;
 using System.Web.Http.Cors;
 
+
 namespace fashion_store
 {
     public static class WebApiConfig
     {
         public static void Register(HttpConfiguration config)
         {
-            var cors = new EnableCorsAttribute("*", "*", "*");
-            config.EnableCors(cors);
+            
 
             config.MapHttpAttributeRoutes();
 
@@ -20,6 +20,8 @@ namespace fashion_store
                 routeTemplate: "api/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
+            EnableCorsAttribute cors = new EnableCorsAttribute("*", "*", "*");
+            config.EnableCors(cors);
         }
     }
 }

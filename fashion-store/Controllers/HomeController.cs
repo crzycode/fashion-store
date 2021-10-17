@@ -12,9 +12,15 @@ namespace fashion_store.Controllers
         DBstore db = new DBstore();
         public ActionResult Index()
         {
-            ViewBag.Title = "Home Page";
+            
 
             return View();
+        }
+        [HttpPost]
+        public ActionResult Userdata(User u)
+        {
+
+            return View("MANGAL");
         }
     }
 }

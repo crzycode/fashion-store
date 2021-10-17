@@ -13,6 +13,7 @@ namespace fashion_store.Models
         public string fname { get; set; }
         public string email { get; set; }
         public string password { get; set; }
+        public string cpassword { get; set; }
 
     }
 }
